@@ -5,5 +5,262 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body class="bg-black"></body>
+  <body
+    class="w-screen h-screen flex flex-col justify-center items-center gap-5"
+  >
+    <div class="flex w-full px-48">
+      <input
+        type="text"
+        class="border border-gray-300 rounded-sm pl-5 p-5 flex-1"
+        placeholder="Location"
+      />
+
+      <button type="submit" class="bg-green-300 text-white px-4">search</button>
+    </div>
+    <!-- this div can be done with grid, just practicing the flex methods -->
+    <div
+      class="flex flex-col w-[80vw] h-[80vh] border border-gray-300 bg-[#C5BAFF] text-white"
+    >
+      <div class="flex w-full h-[50%] border border-gray-300">
+        <div class="flex-[2] flex flex-col border border-gray-300">
+          <div
+            class="flex flex-1 flex-col border border-gray-300 items-center gap-5 p-8 relative"
+          >
+            <span
+              class="flex-1 conditionForecast text-white font-bold text-3xl"
+            ></span>
+            <span class="bg-[#C4D9FF] p-2 absolute right-8 changeBtn">F</span>
+
+            <div class="flex items-center border h-[80%] border-[#C5BAFF]">
+              <div
+                class="flex border flex-1 h-full bg-[#C4D9FF] border-[#C5BAFF] items-center"
+              >
+                <p class="location font-bold text-2xl ml-4 p-4"></p>
+              </div>
+              <div
+                class="w-[150px] flex flex-col items-center justify-center border h-full bg-[#C4D9FF] border-[#C5BAFF]"
+              >
+                <p class="text-base">Temperature</p>
+                <span class="temp text-3xl font-bold"></span>
+              </div>
+              <div
+                class="w-[150px] flex flex-col items-center justify-center border h-full bg-[#C4D9FF] border-[#C5BAFF]"
+              >
+                <p class="text-base">Feels Like</p>
+                <span class="feelsLike text-3xl font-bold"></span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-1 flex-col text-justify items-center border border-gray-300 bg-[#C4D9FF] p-5"
+          >
+            <p class="text-2xl font-bold">Forecast</p>
+            <p class="description text-2xl font-bold"></p>
+          </div>
+        </div>
+        <div class="flex-1 flex-col flex border border-gray-300">
+          <div
+            class="flex flex-1 border border-gray-300 gap-10 bg-[#C4D9FF] p-4"
+          >
+            <div
+              class="flex-1 flex flex-col justify-center items-center border bg-[#E8F9FF] text-[#C5BAFF]"
+            >
+              <p class="3xl">Min. Temperature</p>
+              <p class="minTemp text-3xl"></p>
+            </div>
+            <div
+              class="flex-1 flex flex-col justify-center items-center border bg-[#E8F9FF] text-[#C5BAFF]"
+            >
+              <p class="">Max. Temperature</p>
+              <p class="maxTemp text-3xl"></p>
+            </div>
+          </div>
+          <div class="flex flex-1 border border-gray-300 gap-10 p-4">
+            <div
+              class="flex-1 flex flex-col justify-center items-center bg-[#C4D9FF]"
+            >
+              <p class="">Min. Feels Like</p>
+              <p class="minFeels text-3xl"></p>
+            </div>
+            <div
+              class="flex-1 flex flex-col justify-center items-center bg-[#C4D9FF]"
+            >
+              <p class="">Max Feels Like</p>
+              <p class="maxFeels text-3xl"></p>
+            </div>
+          </div>
+        </div>
+        <div class="flex-1 flex flex-col border border-gray-300 p-4 gap-4">
+          <div class="flex-1 flex justify-center items-center bg-[#C4D9FF]">
+            <p class="flex-1 text-center">Wind Speed</p>
+            <p class="windSpeed flex-[3] text-4xl font-bold"></p>
+          </div>
+          <div
+            class="flex-1 flex justify-center items-center bg-[#C4D9FF] p-4 gap-4"
+          >
+            <p class="flex-1 text-center">AVG. Wind Speed</p>
+            <p class="windGust flex-[3] text-4xl font-bold"></p>
+          </div>
+          <div
+            class="flex-1 flex justify-center items-center bg-[#C4D9FF] p-4 gap-4"
+          >
+            <p class="flex-1 text-center">Max Wind Speed</p>
+            <p class="humidity flex-[3] text-4xl font-bold"></p>
+          </div>
+        </div>
+      </div>
+      <div class="flex w-full h-[50%] border border-gray-300 gap-10 p-10 py-20">
+        <div class="flex flex-col flex-1 bg-[#C4D9FF]">
+          <p class="text-xl font-bold text-center flex-1 dateText"></p>
+          <div class="flex flex-col flex-[3]">
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Precipitation </span>
+              <p class="dateTextPrecipitation"></p>
+            </div>
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Wind</span>
+              <p class="dateTextWind"></p>
+            </div>
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Temp</span>
+              <p class="dateTextTemp"></p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col flex-1 bg-[#C4D9FF]">
+          <p
+            class="text-xl font-bold text-center flex-1 dateText secondDate"
+          ></p>
+          <div class="flex flex-col flex-[3]">
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Precipitation </span>
+              <p class="secondDateTextPrecipitation"></p>
+            </div>
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Wind</span>
+              <p class="secondDateTextWind"></p>
+            </div>
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Temp</span>
+              <p class="secondDateTextTemp"></p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col flex-1 bg-[#C4D9FF]">
+          <p
+            class="text-xl font-bold text-center flex-1 dateText thirdDate"
+          ></p>
+          <div class="flex flex-col flex-[3]">
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Precipitation </span>
+              <p class="thirdDateTextPrecipitation"></p>
+            </div>
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Wind</span>
+              <p class="thirdDateTextWind"></p>
+            </div>
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Temp</span>
+              <p class="thirdDateTextTemp"></p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col flex-1 bg-[#C4D9FF]">
+          <p
+            class="text-xl font-bold text-center flex-1 dateText fourthDate"
+          ></p>
+          <div class="flex flex-col flex-[3]">
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Precipitation </span>
+              <p class="fourthDateTextPrecipitation"></p>
+            </div>
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Wind</span>
+              <p class="fourthDateTextWind"></p>
+            </div>
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Temp</span>
+              <p class="fourthDateTextTemp"></p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col flex-1 bg-[#C4D9FF]">
+          <p
+            class="text-xl font-bold text-center flex-1 dateText fifthDate"
+          ></p>
+          <div class="flex flex-col flex-[3]">
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Precipitation </span>
+              <p class="fifthDateTextPrecipitation"></p>
+            </div>
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Wind</span>
+              <p class="fifthDateTextWind"></p>
+            </div>
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Temp</span>
+              <p class="fifthDateTextTemp"></p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col flex-1 bg-[#C4D9FF]">
+          <p
+            class="text-xl font-bold text-center flex-1 dateText sixthDate"
+          ></p>
+          <div class="flex flex-col flex-[3]">
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Precipitation </span>
+              <p class="sixthDateTextPrecipitation"></p>
+            </div>
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Wind</span>
+              <p class="sixthDateTextWind"></p>
+            </div>
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Temp</span>
+              <p class="sixthDateTextTemp"></p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col flex-1 bg-[#C4D9FF]">
+          <p
+            class="text-xl font-bold text-center flex-1 dateText seventhDate"
+          ></p>
+          <div class="flex flex-col flex-[3]">
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Precipitation </span>
+              <p class="seventhDateTextPrecipitation"></p>
+            </div>
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Wind</span>
+              <p class="seventhDateTextWind"></p>
+            </div>
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Temp</span>
+              <p class="seventhDateTextTemp"></p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col flex-1 bg-[#C4D9FF]">
+          <p
+            class="text-xl font-bold text-center flex-1 dateText eightDate"
+          ></p>
+          <div class="flex flex-col flex-[3]">
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Precipitation </span>
+              <p class="eightDateTextPrecipitation"></p>
+            </div>
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Wind</span>
+              <p class="eightDateTextWind"></p>
+            </div>
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Temp</span>
+              <p class="eightDateTextTemp"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

@@ -2,7 +2,15 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateAreas: {
+        layout: [
+          "temp temp feels",
+          "windSpeed    humidity   conditions",
+          "nav    footer footer",
+        ],
+      },
+    },
   },
-  plugins: [],
+  plugins: [require("@savvywombat/tailwindcss-grid-areas")],
 };
